@@ -12,16 +12,13 @@
   <meta name="geo.position" content="-27.367083;-55.896083">
   <meta name="ICBM" content="-27.367083, -55.896083">
 
-  <!-- Preconexiones a Fuentes de Google -->
-  <!-- NUEVA ESTRUCTURA OPTIMIZADA: -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap">
+  <!-- Precarga Optimizada de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap">
   
-
-  <!-- Tailwind CSS cargado síncronamente para evitar saltos de Maquetación (CLS) -->
-  <!script src="https://cdn.tailwindcss.com"><!/script>
+  <!-- CSS Compilado de Tailwind (Carga ultra rápida sin TBT) -->
   <link rel="stylesheet" href="./css/styles.min.css">
 
   <!-- Esquema de Organización Local (JSON-LD) -->
@@ -58,7 +55,7 @@
       --navy: #16365C;
       --deep: #0B0F26;
       --gold: #C69A3E;
-      --gold-accessible: #926C1E; /* Accesibilidad WCAG AA para fuentes claras */
+      --gold-accessible: #926C1E; /* Accesibilidad WCAG AA para textos sobre fondos claros */
       --red: #E6332F;
       --paper: #FFFFFF;
       --mist: #F5F7FA;
@@ -109,7 +106,7 @@
         linear-gradient(rgba(22, 54, 92, .06) 1px, transparent 1px),
         linear-gradient(90deg, rgba(22, 54, 92, .06) 1px, transparent 1px);
       background-size: 42px 42px;
-      min-height: 400px; /* Previene colapso del Hero antes de cargar clases */
+      min-height: 400px;
     }
     
     .hero-orbit {
@@ -198,9 +195,9 @@
       
       <nav class="desktop-nav" aria-label="Navegación principal">
         <ul class="flex items-center gap-5 text-sm font-semibold text-[#16365C]">
-          <li><a class="focus-ring rounded hover:text-[#C69A3E] transition" href="#soluciones" data-i18n="nav_solutions">Soluciones</a></li>
-          <li><a class="focus-ring rounded hover:text-[#C69A3E] transition" href="#metodo" data-i18n="nav_method">Cómo trabajamos</a></li>
-          <li><a class="focus-ring rounded hover:text-[#C69A3E] transition" href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+          <li><a class="focus-ring rounded hover:text-[#926C1E] transition" href="#soluciones" data-i18n="nav_solutions">Soluciones</a></li>
+          <li><a class="focus-ring rounded hover:text-[#926C1E] transition" href="#metodo" data-i18n="nav_method">Cómo trabajamos</a></li>
+          <li><a class="focus-ring rounded hover:text-[#926C1E] transition" href="#contacto" data-i18n="nav_contact">Contacto</a></li>
         </ul>
       </nav>
       
@@ -223,7 +220,6 @@
           <div class="mt-9 flex flex-wrap items-center gap-4">
             <a class="focus-ring inline-flex items-center gap-2 rounded-md px-6 py-3 font-bold text-white bg-[#926C1E] hover:bg-[#785717] transition" href="#contacto">
               <span data-i18n="hero_cta">Contactar</span>
-              <!-- SVG Inline nativo (sin depender de scripts externos) -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
             </a>
             <p class="brand-font font-semibold text-sm tracking-wide text-[#16365C]" data-i18n="hero_pillars">INTEGRIDAD · CONEXIÓN · CRECIMIENTO</p>
@@ -255,7 +251,7 @@
             <p class="eyebrow eyebrow-accessible mb-3" data-i18n="sol_eyebrow">Cuatro maneras de avanzar</p>
             <h2 class="brand-font font-bold text-3xl md:text-4xl text-[#16365C]" data-i18n="sol_title">Soluciones hechas para mover tu negocio.</h2>
           </div>
-          <p class="max-w-md leading-relaxed text-[#4C6078]" data-i18n="sol_desc">Elegí una solución puntual o construí una presencia comercial continua en el mercado.</p>
+          <p class="max-w-md leading-relaxed text-[#314865]" data-i18n="sol_desc">Elegí una solución puntual o construí una presencia comercial continua en el mercado.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-6">
@@ -263,7 +259,7 @@
             <p class="eyebrow eyebrow-accessible">01 · MARKET INTELLIGENCE</p>
             <h3 class="brand-font font-bold text-2xl text-[#16365C] mt-3">Market Intelligence</h3>
             <p class="mt-3 font-semibold text-[#D32F2F]" data-i18n="s1_sub">¿Dónde están las oportunidades?</p>
-            <p class="mt-5 leading-relaxed text-[#4C6078]" data-i18n="s1_desc">Investigación de mercado, análisis competitivo, tendencias, datos, nichos y benchmarking para decidir con evidencia.</p>
+            <p class="mt-5 leading-relaxed text-[#314865]" data-i18n="s1_desc">Investigación de mercado, análisis competitivo, tendencias, datos, nichos y benchmarking para decidir con evidencia.</p>
             <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#926C1E] decoration-2 underline-offset-4" data-i18n="s1_link">Entender mi mercado →</a>
           </article>
 
@@ -271,7 +267,7 @@
             <p class="eyebrow eyebrow-accessible">02 · BUSINESS DEVELOPMENT</p>
             <h3 class="brand-font font-bold text-2xl text-[#16365C] mt-3">Business Development</h3>
             <p class="mt-3 font-semibold text-[#D32F2F]" data-i18n="s2_sub">¿Quién puede comprarme?</p>
-            <p class="mt-5 leading-relaxed text-[#4C6078]" data-i18n="s2_desc">Identificación de empresas y decisores, leads B2B, prospección, matchmaking, reuniones, distribuidores y canales.</p>
+            <p class="mt-5 leading-relaxed text-[#314865]" data-i18n="s2_desc">Identificación de empresas y decisores, leads B2B, prospección, matchmaking, reuniones, distribuidores y canales.</p>
             <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#926C1E] decoration-2 underline-offset-4" data-i18n="s2_link">Encontrar compradores →</a>
           </article>
 
@@ -279,7 +275,7 @@
             <p class="eyebrow eyebrow-accessible">03 · MARKET ENTRY</p>
             <h3 class="brand-font font-bold text-2xl text-[#16365C] mt-3">Market Entry</h3>
             <p class="mt-3 font-semibold text-[#D32F2F]" data-i18n="s3_sub">¿Cómo entro y crezco en ese mercado?</p>
-            <p class="mt-5 leading-relaxed text-[#4C6078]" data-i18n="s3_desc">Estrategia de entrada, búsqueda de distribuidores, adaptación comercial, canales, logística y acompañamiento.</p>
+            <p class="mt-5 leading-relaxed text-[#314865]" data-i18n="s3_desc">Estrategia de entrada, búsqueda de distribuidores, adaptación comercial, canales, logística y acompañamiento.</p>
             <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#926C1E] decoration-2 underline-offset-4" data-i18n="s3_link">Planear mi entrada →</a>
           </article>
 
@@ -301,7 +297,7 @@
           </div>
           <div class="architecture-line max-w-xl mx-auto my-6"></div>
           <div class="brand-font max-w-xl mx-auto rounded-md bg-[#16365C] px-5 py-4 text-center font-bold text-white text-xl">BUSINESS GROWTH</div>
-          <p class="mt-5 text-center font-semibold tracking-widest text-[#4C6078] text-xs uppercase">IA + DATA + NETWORK</p>
+          <p class="mt-5 text-center font-semibold tracking-widest text-[#314865] text-xs uppercase">IA + DATA + NETWORK</p>
         </div>
       </div>
     </section>
@@ -317,19 +313,19 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
           <article class="rounded-md p-5 bg-white">
             <h3 class="brand-font font-bold text-xl text-[#16365C]" data-i18n="val1_title">Transparencia</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C6078]" data-i18n="val1_desc">Informamos claramente qué encontramos y qué no encontramos.</p>
+            <p class="mt-3 text-sm leading-relaxed text-[#314865]" data-i18n="val1_desc">Informamos claramente qué encontramos y qué no encontramos.</p>
           </article>
           <article class="rounded-md p-5 bg-white">
             <h3 class="brand-font font-bold text-xl text-[#16365C]" data-i18n="val2_title">Orientación a resultados</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C6078]" data-i18n="val2_desc">Medimos prospectos, reuniones, oportunidades y negocios generados.</p>
+            <p class="mt-3 text-sm leading-relaxed text-[#314865]" data-i18n="val2_desc">Medimos prospectos, reuniones, oportunidades y negocios generados.</p>
           </article>
           <article class="rounded-md p-5 bg-white">
             <h3 class="brand-font font-bold text-xl text-[#16365C]" data-i18n="val3_title">Integridad</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C6078]" data-i18n="val3_desc">Convertimos información validada en oportunidades comerciales reales.</p>
+            <p class="mt-3 text-sm leading-relaxed text-[#314865]" data-i18n="val3_desc">Convertimos información validada en oportunidades comerciales reales.</p>
           </article>
           <article class="rounded-md p-5 bg-white">
             <h3 class="brand-font font-bold text-xl text-[#16365C]" data-i18n="val4_title">Visión global</h3>
-            <p class="mt-3 text-sm leading-relaxed text-[#4C6078]" data-i18n="val4_desc">Argentina, Brasil y mercados internacionales.</p>
+            <p class="mt-3 text-sm leading-relaxed text-[#314865]" data-i18n="val4_desc">Argentina, Brasil y mercados internacionales.</p>
           </article>
         </div>
         
@@ -342,11 +338,11 @@
         <div>
           <p class="eyebrow eyebrow-accessible mb-3" data-i18n="contact_eyebrow">Contacto</p>
           <h2 class="brand-font font-bold text-3xl md:text-4xl text-[#16365C]" data-i18n="contact_title">Contanos dónde querés crecer.</h2>
-          <p class="mt-5 leading-relaxed text-[#4C6078] max-w-md" data-i18n="contact_desc">Dejá una breve descripción de tu desafío. La conversación empieza con el mercado y termina en una próxima acción concreta.</p>
+          <p class="mt-5 leading-relaxed text-[#314865] max-w-md" data-i18n="contact_desc">Dejá una breve descripción de tu desafío. La conversación empieza con el mercado y termina en una próxima acción concreta.</p>
           
           <div class="mt-8 border-l-2 border-[#C69A3E] pl-5">
             <p class="brand-font font-bold text-xl text-[#16365C]">Posadas, Misiones, Argentina</p>
-            <p class="mt-2 text-sm leading-relaxed text-[#4C6078]" data-i18n="contact_region">Trabajamos en el corredor Argentina ↔ Brasil ↔ Paraguay y mercados internacionales.</p>
+            <p class="mt-2 text-sm leading-relaxed text-[#314865]" data-i18n="contact_region">Trabajamos en el corredor Argentina ↔ Brasil ↔ Paraguay y mercados internacionales.</p>
           </div>
         </div>
 
@@ -415,7 +411,7 @@
         nav_contact: "Contacto",
         hero_desc: "InData combina estrategia empresarial, inteligencia de mercados, análisis de datos e inteligencia artificial para transformar información de mercado en oportunidades comerciales concretas.",
         hero_cta: "Contactar",
-        hero_pillars: "INTEGRIDAD · CONEXIÓN · CRECIMIENTO",
+        hero_pillars: "INTEGRIDADE · CONEXÃO · CRECIMIENTO",
         questions_eyebrow: "Tu desafío primero",
         questions_title: "Reconocé el problema. Encontrá el siguiente paso.",
         q1: "Quiero entrar en Brasil.",
