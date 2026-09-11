@@ -12,6 +12,17 @@
   <meta name="geo.position" content="-27.367083;-55.896083">
   <meta name="ICBM" content="-27.367083, -55.896083">
 
+  <!-- Preconexiones optimizadas para fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS optimizado con diferimiento de script -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  
+  <!-- Lucide Icons cargado con defer para no bloquear el renderizado inicial -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
   <!-- Esquema de Organización Local (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -41,22 +52,12 @@
   }
   </script>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
   <style>
     :root {
       --navy: #16365C;
       --deep: #0B0F26;
       --gold: #C69A3E;
+      --gold-accessible: #926C1E; /* Color con suficiente contraste sobre fondos claros */
       --red: #E6332F;
       --paper: #FFFFFF;
       --mist: #F5F7FA;
@@ -126,6 +127,11 @@
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 700;
       font-size: .75rem;
+    }
+
+    /* Corrección de accesibilidad (contraste de texto sobre fondos claros) */
+    .eyebrow-accessible {
+      color: var(--gold-accessible);
     }
 
     .question-link {
@@ -205,11 +211,11 @@
       <div class="hero-orbit" aria-hidden="true"></div>
       <div class="w-full max-w-7xl mx-auto px-5 pt-20 pb-20 md:pt-28 md:pb-28 relative">
         <div class="max-w-3xl">
-          <div class="eyebrow text-[#C69A3E] mb-5">Posadas, Misiones · Argentina ↔ Brasil ↔ Paraguay</div>
+          <div class="eyebrow eyebrow-accessible mb-5">Posadas, Misiones · Argentina ↔ Brasil ↔ Paraguay</div>
           <h1 class="brand-font font-bold text-[#16365C] text-5xl md:text-7xl leading-[.95] tracking-tight max-w-2xl">From Data to Business.</h1>
           <p class="mt-7 text-lg md:text-xl leading-relaxed text-[#314865] max-w-2xl" data-i18n="hero_desc">InData combina estrategia empresarial, inteligencia de mercados, análisis de datos e inteligencia artificial para transformar información de mercado en oportunidades comerciales concretas.</p>
           <div class="mt-9 flex flex-wrap items-center gap-4">
-            <a class="focus-ring inline-flex items-center gap-2 rounded-md px-6 py-3 font-bold text-white bg-[#C69A3E] transition hover:brightness-95" href="#contacto">
+            <a class="focus-ring inline-flex items-center gap-2 rounded-md px-6 py-3 font-bold text-white bg-[#926C1E] hover:bg-[#785717] transition" href="#contacto">
               <span data-i18n="hero_cta">Contactar</span>
               <i data-lucide="arrow-down-right" class="w-4 h-4" aria-hidden="true"></i>
             </a>
@@ -222,7 +228,7 @@
     <section class="section-anchor bg-[#F5F7FA] py-16 md:py-20">
       <div class="w-full max-w-7xl mx-auto px-5">
         <div class="max-w-2xl mb-10">
-          <p class="eyebrow text-[#C69A3E] mb-3" data-i18n="questions_eyebrow">Tu desafío primero</p>
+          <p class="eyebrow eyebrow-accessible mb-3" data-i18n="questions_eyebrow">Tu desafío primero</p>
           <h2 class="brand-font font-bold text-3xl md:text-4xl text-[#16365C]" data-i18n="questions_title">Reconocé el problema. Encontrá el siguiente paso.</h2>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-3">
@@ -239,7 +245,7 @@
       <div class="w-full max-w-7xl mx-auto px-5">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-12">
           <div>
-            <p class="eyebrow text-[#C69A3E] mb-3" data-i18n="sol_eyebrow">Cuatro maneras de avanzar</p>
+            <p class="eyebrow eyebrow-accessible mb-3" data-i18n="sol_eyebrow">Cuatro maneras de avanzar</p>
             <h2 class="brand-font font-bold text-3xl md:text-4xl text-[#16365C]" data-i18n="sol_title">Soluciones hechas para mover tu negocio.</h2>
           </div>
           <p class="max-w-md leading-relaxed text-[#4C6078]" data-i18n="sol_desc">Elegí una solución puntual o construí una presencia comercial continua en el mercado.</p>
@@ -247,27 +253,27 @@
         
         <div class="grid md:grid-cols-2 gap-6">
           <article id="market-intelligence" class="solution-card section-anchor rounded-lg bg-white p-7">
-            <p class="eyebrow text-[#C69A3E]">01 · MARKET INTELLIGENCE</p>
+            <p class="eyebrow eyebrow-accessible">01 · MARKET INTELLIGENCE</p>
             <h3 class="brand-font font-bold text-2xl text-[#16365C] mt-3">Market Intelligence</h3>
-            <p class="mt-3 font-semibold text-[#E6332F]" data-i18n="s1_sub">¿Dónde están las oportunidades?</p>
+            <p class="mt-3 font-semibold text-[#D32F2F]" data-i18n="s1_sub">¿Dónde están las oportunidades?</p>
             <p class="mt-5 leading-relaxed text-[#4C6078]" data-i18n="s1_desc">Investigación de mercado, análisis competitivo, tendencias, datos, nichos y benchmarking para decidir con evidencia.</p>
-            <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#C69A3E] decoration-2 underline-offset-4" data-i18n="s1_link">Entender mi mercado →</a>
+            <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#926C1E] decoration-2 underline-offset-4" data-i18n="s1_link">Entender mi mercado →</a>
           </article>
 
           <article id="business-development" class="solution-card section-anchor rounded-lg bg-white p-7">
-            <p class="eyebrow text-[#C69A3E]">02 · BUSINESS DEVELOPMENT</p>
+            <p class="eyebrow eyebrow-accessible">02 · BUSINESS DEVELOPMENT</p>
             <h3 class="brand-font font-bold text-2xl text-[#16365C] mt-3">Business Development</h3>
-            <p class="mt-3 font-semibold text-[#E6332F]" data-i18n="s2_sub">¿Quién puede comprarme?</p>
+            <p class="mt-3 font-semibold text-[#D32F2F]" data-i18n="s2_sub">¿Quién puede comprarme?</p>
             <p class="mt-5 leading-relaxed text-[#4C6078]" data-i18n="s2_desc">Identificación de empresas y decisores, leads B2B, prospección, matchmaking, reuniones, distribuidores y canales.</p>
-            <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#C69A3E] decoration-2 underline-offset-4" data-i18n="s2_link">Encontrar compradores →</a>
+            <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#926C1E] decoration-2 underline-offset-4" data-i18n="s2_link">Encontrar compradores →</a>
           </article>
 
           <article id="market-entry" class="solution-card section-anchor rounded-lg bg-white p-7">
-            <p class="eyebrow text-[#C69A3E]">03 · MARKET ENTRY</p>
+            <p class="eyebrow eyebrow-accessible">03 · MARKET ENTRY</p>
             <h3 class="brand-font font-bold text-2xl text-[#16365C] mt-3">Market Entry</h3>
-            <p class="mt-3 font-semibold text-[#E6332F]" data-i18n="s3_sub">¿Cómo entro y crezco en ese mercado?</p>
+            <p class="mt-3 font-semibold text-[#D32F2F]" data-i18n="s3_sub">¿Cómo entro y crezco en ese mercado?</p>
             <p class="mt-5 leading-relaxed text-[#4C6078]" data-i18n="s3_desc">Estrategia de entrada, búsqueda de distribuidores, adaptación comercial, canales, logística y acompañamiento.</p>
-            <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#C69A3E] decoration-2 underline-offset-4" data-i18n="s3_link">Planear mi entrada →</a>
+            <a href="#contacto" class="focus-ring inline-flex mt-6 font-bold text-[#16365C] underline decoration-[#926C1E] decoration-2 underline-offset-4" data-i18n="s3_link">Planear mi entrada →</a>
           </article>
 
           <article id="business-desk" class="desk-card section-anchor rounded-lg p-7 text-white">
@@ -280,7 +286,7 @@
         </div>
 
         <div class="mt-16 rounded-lg bg-[#F5F7FA] p-7 md:p-10">
-          <p class="eyebrow text-[#C69A3E] text-center" data-i18n="arch_eyebrow">Una arquitectura para crecer</p>
+          <p class="eyebrow eyebrow-accessible text-center" data-i18n="arch_eyebrow">Una arquitectura para crecer</p>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-7 max-w-3xl mx-auto">
             <div class="arch-pill rounded-md px-3 py-4 text-center font-semibold text-[#16365C]">Market Intelligence</div>
             <div class="arch-pill rounded-md px-3 py-4 text-center font-semibold text-[#16365C]">Business Development</div>
@@ -327,7 +333,7 @@
     <section id="contacto" class="section-anchor py-20 bg-white">
       <div class="w-full max-w-7xl mx-auto px-5 grid lg:grid-cols-[.85fr_1.15fr] gap-12">
         <div>
-          <p class="eyebrow text-[#C69A3E] mb-3" data-i18n="contact_eyebrow">Contacto</p>
+          <p class="eyebrow eyebrow-accessible mb-3" data-i18n="contact_eyebrow">Contacto</p>
           <h2 class="brand-font font-bold text-3xl md:text-4xl text-[#16365C]" data-i18n="contact_title">Contanos dónde querés crecer.</h2>
           <p class="mt-5 leading-relaxed text-[#4C6078] max-w-md" data-i18n="contact_desc">Dejá una breve descripción de tu desafío. La conversación empieza con el mercado y termina en una próxima acción concreta.</p>
           
@@ -376,7 +382,7 @@
           </div>
 
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <button id="submit-button" type="submit" class="focus-ring rounded-md px-6 py-3 font-bold text-white bg-[#C69A3E] transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60" data-i18n="btn_submit">Enviar consulta</button>
+            <button id="submit-button" type="submit" class="focus-ring rounded-md px-6 py-3 font-bold text-white bg-[#926C1E] hover:bg-[#785717] transition disabled:cursor-not-allowed disabled:opacity-60" data-i18n="btn_submit">Enviar consulta</button>
             <span id="sending-state" class="hidden text-sm font-semibold text-[#16365C]" aria-live="polite" data-i18n="sending_state">Enviando tu consulta…</span>
           </div>
 
@@ -566,7 +572,7 @@
         val3_desc: "We convert validated information into real business opportunities.",
         val4_title: "Global vision",
         val4_desc: "Argentina, Brazil, and international markets.",
-        about_footer: "Business management + computer engineering + AI + cross-border market expertise across Argentina and Brazil to turn complex markets into concrete business opportunities.",
+        about_footer: "Business management + computer engineering + IA + cross-border market expertise across Argentina and Brazil to turn complex markets into concrete business opportunities.",
         contact_eyebrow: "Contact",
         contact_title: "Tell us where you want to grow.",
         contact_desc: "Provide a brief description of your challenge. The strategy begins with market data and leads to actionable steps.",
