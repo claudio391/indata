@@ -12,16 +12,13 @@
   <meta name="geo.position" content="-27.367083;-55.896083">
   <meta name="ICBM" content="-27.367083, -55.896083">
 
-  <!-- Preconexiones optimizadas para fuentes -->
+  <!-- Preconexiones y Fuentes con display=swap para renderizado inmediato -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS optimizado con diferimiento de script -->
+  <!-- Tailwind CSS CDN con diferimiento para eliminar bloqueo de renderizado -->
   <script src="https://cdn.tailwindcss.com" defer></script>
-  
-  <!-- Lucide Icons cargado con defer para no bloquear el renderizado inicial -->
-  <script src="https://unpkg.com/lucide@latest" defer></script>
 
   <!-- Esquema de Organización Local (JSON-LD) -->
   <script type="application/ld+json">
@@ -57,7 +54,7 @@
       --navy: #16365C;
       --deep: #0B0F26;
       --gold: #C69A3E;
-      --gold-accessible: #926C1E; /* Color con suficiente contraste sobre fondos claros */
+      --gold-accessible: #926C1E; /* Mayor contraste para texto sobre blanco/claro */
       --red: #E6332F;
       --paper: #FFFFFF;
       --mist: #F5F7FA;
@@ -129,7 +126,6 @@
       font-size: .75rem;
     }
 
-    /* Corrección de accesibilidad (contraste de texto sobre fondos claros) */
     .eyebrow-accessible {
       color: var(--gold-accessible);
     }
@@ -217,7 +213,8 @@
           <div class="mt-9 flex flex-wrap items-center gap-4">
             <a class="focus-ring inline-flex items-center gap-2 rounded-md px-6 py-3 font-bold text-white bg-[#926C1E] hover:bg-[#785717] transition" href="#contacto">
               <span data-i18n="hero_cta">Contactar</span>
-              <i data-lucide="arrow-down-right" class="w-4 h-4" aria-hidden="true"></i>
+              <!-- SVG Inline nativo (sin depender de scripts externos) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
             </a>
             <p class="brand-font font-semibold text-sm tracking-wide text-[#16365C]" data-i18n="hero_pillars">INTEGRIDAD · CONEXIÓN · CRECIMIENTO</p>
           </div>
@@ -572,7 +569,7 @@
         val3_desc: "We convert validated information into real business opportunities.",
         val4_title: "Global vision",
         val4_desc: "Argentina, Brazil, and international markets.",
-        about_footer: "Business management + computer engineering + IA + cross-border market expertise across Argentina and Brazil to turn complex markets into concrete business opportunities.",
+        about_footer: "Business management + computer engineering + AI + cross-border market expertise across Argentina and Brazil to turn complex markets into concrete business opportunities.",
         contact_eyebrow: "Contact",
         contact_title: "Tell us where you want to grow.",
         contact_desc: "Provide a brief description of your challenge. The strategy begins with market data and leads to actionable steps.",
@@ -683,9 +680,6 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       setLanguage("es");
-      if (window.lucide) {
-        lucide.createIcons();
-      }
     });
   </script>
 </body>
