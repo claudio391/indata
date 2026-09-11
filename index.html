@@ -12,13 +12,13 @@
   <meta name="geo.position" content="-27.367083;-55.896083">
   <meta name="ICBM" content="-27.367083, -55.896083">
 
-  <!-- Preconexiones y Fuentes con display=swap para renderizado inmediato -->
+  <!-- Preconexiones a Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN con diferimiento para eliminar bloqueo de renderizado -->
-  <script src="https://cdn.tailwindcss.com" defer></script>
+  <!-- Tailwind CSS cargado síncronamente para evitar saltos de Maquetación (CLS) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Esquema de Organización Local (JSON-LD) -->
   <script type="application/ld+json">
@@ -54,16 +54,19 @@
       --navy: #16365C;
       --deep: #0B0F26;
       --gold: #C69A3E;
-      --gold-accessible: #926C1E; /* Mayor contraste para texto sobre blanco/claro */
+      --gold-accessible: #926C1E; /* Accesibilidad WCAG AA para fuentes claras */
       --red: #E6332F;
       --paper: #FFFFFF;
       --mist: #F5F7FA;
     }
 
     * { box-sizing: border-box; }
-    body {
+    
+    /* Reserva explícita de layout para prevenir CLS durante renderizado */
+    html, body {
       margin: 0;
       width: 100%;
+      min-height: 100vh;
       font-family: "Montserrat", sans-serif;
       color: var(--deep);
       overflow-x: hidden;
@@ -77,6 +80,7 @@
       background: rgba(255, 255, 255, 0.93);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(22, 54, 92, 0.10);
+      min-height: 68px; /* Previene movimiento del header */
     }
 
     .brand-symbol {
@@ -101,7 +105,9 @@
         linear-gradient(rgba(22, 54, 92, .06) 1px, transparent 1px),
         linear-gradient(90deg, rgba(22, 54, 92, .06) 1px, transparent 1px);
       background-size: 42px 42px;
+      min-height: 400px; /* Previene colapso del Hero antes de cargar clases */
     }
+    
     .hero-orbit {
       width: min(48vw, 520px); aspect-ratio: 1; border-radius: 50%;
       position: absolute; right: -10vw; top: 8%;
